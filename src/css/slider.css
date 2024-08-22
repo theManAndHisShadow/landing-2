@@ -1,0 +1,29 @@
+  .infinity-carousel {
+    background: white;
+    height: 100px;
+    margin: auto;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    display: flex;
+  }
+
+  .infinity-carousel::before, .infinity-carousel::after {
+    background: linear-gradient(to right, white 0%, rgba(255, 255, 255, 0) 100%);
+    content: "";
+    height: 100px;
+    position: absolute;
+    width: 100px;
+    z-index: 2;
+  }
+
+  .infinity-carousel::after {
+    right: 0;
+    top: 0;
+    transform: rotateZ(180deg);
+  }
+
+  .infinity-carousel::before {
+    left: 0;
+    top: 0;
+  }
